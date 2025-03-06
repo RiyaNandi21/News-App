@@ -59,7 +59,8 @@ nav {
 }
 
 .company-logo img {
-    width: 260px;
+    width: 180px;
+    
 }
 
 .nav-links ul {
@@ -84,12 +85,14 @@ nav {
 
 .search-bar {
     height: 32px;
-    gap: 18px;
-   
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    flex-wrap: nowrap; 
 }
 
 .news-input {
-    width: 250px;
+    width: 240px;
     height: 100%;
     padding-inline: 12px;
     border-radius: 4px;
@@ -131,13 +134,13 @@ main {
     cursor: pointer;
     background-color: white;
     overflow: hidden;
-   transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
     box-shadow: 9px 1px 1px #d6dbdf;
-    background-color:rgb(243, 240, 240);
-   transform:scale(1.05);
+    background-color: rgb(243, 240, 240);
+    transform: scale(1.05);
 }
 
 .card-header img {
@@ -152,4 +155,45 @@ main {
 
 .news-source {
     margin-block: 12px;
+}
+
+@media (max-width: 480px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .company-logo img {
+        width: 90%;
+        max-width: 300px; 
+        gap: 2px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        max-width:100%;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .news-input {
+        width: 90%; 
+        max-width: 400px;
+        
+    }
+
+    .search-button {
+        width: 90%;
+        text-align: center;
+       
+    }
 }
